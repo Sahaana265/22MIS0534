@@ -40,20 +40,23 @@ const Dashboard = () => {
         </Typography>
       </Box>
 
-      <Grid container spacing={3} sx={{ mb: 4 }}>
-        <Grid item xs={12} sm={6} md={3}>
-          <DashboardStatCard title="Total Notifications" count={data.length} icon={<NotificationsActiveIcon />} color="primary" />
-        </Grid>
-        <Grid item xs={12} sm={6} md={3}>
-          <DashboardStatCard title="Placements" count={placements} icon={<BusinessCenterIcon />} color="primary" />
-        </Grid>
-        <Grid item xs={12} sm={6} md={3}>
-          <DashboardStatCard title="Results" count={results} icon={<AssignmentIcon />} color="success" />
-        </Grid>
-        <Grid item xs={12} sm={6} md={3}>
-          <DashboardStatCard title="Events" count={events} icon={<EventIcon />} color="info" />
-        </Grid>
-      </Grid>
+      <Box
+        sx={{
+          display: 'grid',
+          gap: 3,
+          gridTemplateColumns: {
+            xs: '1fr',
+            sm: 'repeat(2, 1fr)',
+            md: 'repeat(4, 1fr)',
+          },
+          mb: 4,
+        }}
+      >
+        <DashboardStatCard title="Total Notifications" count={data.length} icon={<NotificationsActiveIcon />} color="primary" />
+        <DashboardStatCard title="Placements" count={placements} icon={<BusinessCenterIcon />} color="primary" />
+        <DashboardStatCard title="Results" count={results} icon={<AssignmentIcon />} color="success" />
+        <DashboardStatCard title="Events" count={events} icon={<EventIcon />} color="info" />
+      </Box>
 
       <Grid container spacing={4}>
         <Grid item xs={12} md={6}>
