@@ -13,6 +13,7 @@ import { useNavigate } from 'react-router-dom';
 import { Log } from '../../../logging_middleware/logger';
 import { getTopPriorityUnread } from '../utils/priority';
 
+
 const Dashboard = () => {
   const { data, loading, error, refresh } = useNotifications({ limit: 50 }); // Fetch more for stats
   const navigate = useNavigate();
