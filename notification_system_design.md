@@ -42,5 +42,5 @@ For the middleware requirement, I created a standalone `logging_middleware` fold
 If the logging API goes down, the middleware just catches the error and logs a quiet warning to `console.error` without spamming the user or breaking the app.
 
 ## 4. Final Thoughts & Tradeoffs
-I prioritized making the UI look as clean and recruiter-friendly as possible using soft backgrounds, glassmorphism on the header, and smooth hover shadows. 
+I prioritized making the UI look as clean and recruiter-friendly as possible using soft backgrounds on the header, and smooth hover shadows. 
 If I had more time or if this was going to production, I'd probably swap the standard React Context/Hooks state management for Redux Toolkit, and look into setting up WebSockets so notifications push to the client in real-time instead of needing a refresh. But for the scope of this evaluation, I think this setup hits the sweet spot between clean architecture and solid user experience.
