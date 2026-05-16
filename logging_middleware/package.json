@@ -1,0 +1,15 @@
+{
+  "name": "logging_middleware",
+  "version": "1.0.0",
+  "description": "This is a standalone logging module designed to be used by the frontend application to push logs to the centralized evaluating service.",
+  "main": "constants.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.16.1"
+  }
+}
